@@ -1,7 +1,7 @@
 reddit2md
 
   Export a Reddit post and all its comments to Markdown.
-  Single file, no dependencies, no API keys.
+  Single file, No dependencies. No API keys.
 
 Usage:
 
@@ -13,7 +13,7 @@ Usage:
 
 What it does:
 
-  - Fetches via Reddit's public JSON API — no API keys, no auth
+  - Fetches via Reddit's public JSON API. No API keys, no auth.
   - Gets all comments including "more" threads (via /api/morechildren)
   - Properly nested blockquotes (>, >>, >>>, etc.) at arbitrary depth
   - Preserves comment metadata: author, score, time, OP/MOD/ADMIN badges, edited status, gilding
