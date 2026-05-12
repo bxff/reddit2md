@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "reddit2md"
+version = "0.1.0"
+description = "Export a Reddit post and all its comments to Markdown"
+readme = "README.txt"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+    { name = "bxff" },
+]
+
+[project.scripts]
+reddit2md = "reddit2md:main"
+
+[project.urls]
+Repository = "https://github.com/bxff/reddit2md"

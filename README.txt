@@ -1,7 +1,12 @@
 reddit2md
 
   Export a Reddit post and all its comments to Markdown.
-  Single file, No dependencies. No API keys.
+  Single file. No dependencies. No API keys.
+
+Install:
+
+  uv tool install git+https://github.com/bxff/reddit2md
+  pip install git+https://github.com/bxff/reddit2md
 
 Usage:
 
