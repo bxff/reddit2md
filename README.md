@@ -1,21 +1,22 @@
-# reddit2md
+reddit2md
 
-Export a Reddit post and all its comments to Markdown. Single file, no dependencies, no API keys.
+  Export a Reddit post and all its comments to Markdown.
+  Single file, no dependencies, no API keys.
 
-## Usage
+Usage:
 
-```
-python3 reddit2md.py <reddit-post-url>
-python3 reddit2md.py -o post.md <url>
-python3 reddit2md.py -f indent <url>
-python3 reddit2md.py -f headers <url>
-python3 reddit2md.py --no-comments <url>
-```
+  python3 reddit2md.py <reddit-post-url>                    # output to stdout
+  python3 reddit2md.py -o post.md <url>                     # save to file
+  python3 reddit2md.py -f indent <url>                      # nested list format
+  python3 reddit2md.py -f headers <url>                     # heading-based format
+  python3 reddit2md.py --no-comments <url>                  # post only, skip comments
 
-## Options
+What it does:
 
-| Flag | Description |
-|------|-------------|
-| `-o, --output` | Output file (default: stdout) |
-| `-f, --format` | `blockquote` (default), `indent`, or `headers` |
-| `--no-comments` | Only export the post, skip comments |
+  - Fetches via Reddit's public JSON API — no API keys, no auth
+  - Gets all comments including "more" threads (via /api/morechildren)
+  - Properly nested blockquotes (>, >>, >>>, etc.) at arbitrary depth
+  - Preserves comment metadata: author, score, time, OP/MOD/ADMIN badges, edited status, gilding
+  - Handles deleted/removed comments, spoiler tags, link posts
+  - 3 output formats: blockquote (default), indent, headers
+  - Clean error messages for 404s, rate limits, network issues
